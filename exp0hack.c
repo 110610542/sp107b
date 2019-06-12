@@ -88,6 +88,19 @@ int E() {
   return i1;
 }
 
+// T = F ([*/] F)*
+int T() {
+  int f1 = F();
+  while (isNext("*/")) {
+    char op=next();
+    int f2 = F();
+    int f = nextTemp();
+    genOp2(f, f1, op, f2);
+    f1 = f;
+  }
+  return f1;
+}
+
 void parse(char *str) {
   tokens = str;
   E();
