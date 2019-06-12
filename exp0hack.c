@@ -8,7 +8,7 @@ char *tokens;
 
 int E();
 int F();
-
+int T();
 
 void error(char *msg) {
   printf("%s", msg);
