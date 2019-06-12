@@ -75,12 +75,12 @@ int F() {
   return f; 
 }
 
-// E = F ([+-] F)*
+// E = T ([+-] T)*
 int E() {
-  int i1 = F();
+  int i1 = T();
   while (isNext("+-")) {
     char op=next();
-    int i2 = F();
+    int i2 = T();
     int i = nextTemp();
     genOp2(i, i1, op, i2);
     i1 = i;
