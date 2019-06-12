@@ -90,15 +90,15 @@ int E() {
 
 // T = F ([*/] F)*
 int T() {
-  int f1 = F();
+  int i1 = F();
   while (isNext("*/")) {
     char op=next();
-    int f2 = F();
-    int f = nextTemp();
-    genOp2(f, f1, op, f2);
-    f1 = f;
+    int i2 = F();
+    int i = nextTemp();
+    genOp2(i, i1, op, i2);
+    i1 = i;
   }
-  return f1;
+  return i1;
 }
 
 void parse(char *str) {
